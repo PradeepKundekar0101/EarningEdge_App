@@ -1,14 +1,17 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
+import { Text, View } from "react-native";
+import React, { Component } from "react";
+import { Redirect } from "expo-router";
 
-export class TabsLayout extends Component {
-  render() {
-    return (
-      <View>
-        <Text>TabsLayout</Text>
-      </View>
-    )
+const TabsLayout = () => {
+  const isAuthenticated = false;
+  if (!isAuthenticated) {
+    return <Redirect href={"/Onboarding"} />;
   }
-}
+  return (
+    <View>
+      <Text>TabsLayout</Text>
+    </View>
+  );
+};
 
-export default TabsLayout
+export default TabsLayout;
