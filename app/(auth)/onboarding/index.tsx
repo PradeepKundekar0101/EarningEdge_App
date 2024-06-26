@@ -27,13 +27,13 @@ const Onboarding = () => {
         />
         <View className="mx-[36px]">
           <View className="mt-[419px]">
-            <Text className="text-[40px] font-normal leading-[50px] text-white">
+            <Text className="text-[40px] font-normal font-[Inter] leading-[50px] text-white">
               Welcome to
             </Text>
-            <Text className="text-[40px] font-bold leading-[50px] text-white">
+            <Text className="text-[40px] font-bold font-[Inter] leading-[50px] text-white">
               Earning Edge
             </Text>
-            <Text className="text-[12px] mt-2 font-normal leading-[16px] text-white text-justify">
+            <Text className="text-[12px] mt-2 font-normal font-[Inter] leading-[16px] text-white text-justify">
               Earning Edge is trading platform designed and developed to assist
               traders
             </Text>
@@ -43,14 +43,14 @@ const Onboarding = () => {
               onPress={() => router.push("/signUp")}
               className="h-[50px] border border-white items-center justify-center align-center"
             >
-              <Text className="text-white">Create An Account</Text>
+              <Text className="text-white font-[Inter]">Create An Account</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               onPress={() => router.push("/signIn")}
               className="h-[50px] bg-white items-center justify-center align-center"
             >
-              <Text>LOGIN</Text>
+              <Text className="font-[Inter]">LOGIN</Text>
             </TouchableOpacity>
           </View>
         </View>
