@@ -24,6 +24,7 @@ const Onboarding = () => {
         <LinearGradient
           colors={["transparent", "rgba(0,0,0,0.85)"]}
           className="absolute w-[100%] h-[100%]"
+          locations={[0, 0]}
         />
         <View className="mx-[36px]">
           <View className="mt-[419px]">
