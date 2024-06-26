@@ -5,7 +5,7 @@ import { Redirect } from "expo-router";
 const TabsLayout = () => {
   const isAuthenticated = false;
   if (!isAuthenticated) {
-    return <Redirect href={"/Onboarding"} />;
+    return <Redirect href={"/onboarding"} />;
   }
   return (
     <View>

@@ -1,16 +1,60 @@
-import { Link } from "expo-router";
+import { Link, router } from "expo-router";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  Dimensions,
+  ImageBackground,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { IMAGES } from "../../../src/constants/images";
+import { LinearGradient } from "expo-linear-gradient";
+import Button from "../../../src/components/Button";
 
 const Onboarding = () => {
   return (
-    <View className="bg-black flex-1">
-      <Link href={"/signUp"} className="h-10 bg-red-50 mt-4 mx-4 text-center ">
-        Create An Account
-      </Link>
-      <Link href={"/signIn"} className="h-10 bg-red-100 mt-4 mx-4 text-center">
-        Login
-      </Link>
+    <View className="bg-black flex-1 ">
+      <ImageBackground
+        source={require("../../../assets/backgroundImage.png")}
+        resizeMode="cover"
+        resizeMethod="scale"
+        className="flex-1"
+      >
+        <LinearGradient
+          colors={["transparent", "rgba(0,0,0,1.0)"]}
+          className="absolute w-[100%] h-[100%]"
+        />
+        <View className="mx-[36px]">
+          <View className="mt-[419px]">
+            <Text className="text-[40px] font-normal leading-[50px] text-white">
+              Welcome to
+            </Text>
+            <Text className="text-[40px] font-bold leading-[50px] text-white">
+              Earning Edge
+            </Text>
+            <Text className="text-[12px] mt-2 font-normal leading-[16px] text-white text-justify">
+              Earning Edge is trading platform designed and developed to assist
+              traders
+            </Text>
+          </View>
+          <View className="gap-[32px] mt-1">
+            <TouchableOpacity
+              onPress={() => router.push("/signUp")}
+              className="h-[50px] border border-white items-center justify-center align-center"
+            >
+              <Text className="text-white">Create An Account</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              onPress={() => router.push("/signIn")}
+              className="h-[50px] bg-white items-center justify-center align-center"
+            >
+              <Text>LOGIN</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ImageBackground>
     </View>
   );
 };
