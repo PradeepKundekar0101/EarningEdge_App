@@ -5,8 +5,15 @@ import { router, useLocalSearchParams } from "expo-router";
 
 const OTPEnterScreen = () => {
   const [OTP, setOTP] = useState<string>("");
-  const { email } = useLocalSearchParams();
+  const { email, phone } = useLocalSearchParams();
 
+  const handleOnPressNext = () => {
+    if (email) {
+      router.push("/signUp/signUpPhone");
+    } else {
+      router.push("/signUp/userDetails");
+    }
+  };
   useEffect(() => {
     if (Number(OTP.length) === 6) {
       console.log("OTP verified!");
@@ -25,7 +32,7 @@ const OTPEnterScreen = () => {
         </View>
 
         <View className="gap-0.5 pb-6 pt-4">
-          <Text className="text-white py-2">OTP sent to {email}</Text>
+          <Text className="text-white py-2">OTP sent to {email || phone}</Text>
           <View className="flex-row justify-between w-[100%] items-center">
             <TextInput
               value={OTP}
@@ -53,7 +60,7 @@ const OTPEnterScreen = () => {
 
         <View className="mt-4">
           <TouchableOpacity
-            // onPress={() => router.push("/otpEnterScreen")}
+            onPress={handleOnPressNext}
             className="h-[50px] bg-white items-center justify-center align-center"
           >
             <Text className="font-[Inter]">Next</Text>

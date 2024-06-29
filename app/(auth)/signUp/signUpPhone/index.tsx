@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
-import UnAuthBackgroundWrapper from "../../../src/components/authBackgroundWrapper";
-import { router } from "expo-router";
 
-const SignUp = () => {
-  const [email, setEmail] = useState("");
+import { router } from "expo-router";
+import UnAuthBackgroundWrapper from "../../../../src/components/authBackgroundWrapper";
+
+const SignUpPhone = () => {
+  const [phone, setPhone] = useState("");
 
   const handleOnPressNext = () => {
-    if (!email) {
-      alert("Enter Email!");
+    if (!phone) {
+      alert("Please enter phone number!");
       return;
     }
     router.push({
       pathname: "/otpEnterScreen",
       params: {
-        email: email,
+        phone: phone,
       },
     });
   };
+
   return (
     <UnAuthBackgroundWrapper>
       <View>
@@ -31,12 +33,12 @@ const SignUp = () => {
         </View>
 
         <View className="gap-0.5 pb-6 pt-4">
-          <Text className="font-[12px] font-[Inter] text-white">Email</Text>
+          <Text className="font-[12px] font-[Inter] text-white">Phone</Text>
           <TextInput
-            placeholder="name@company.com"
+            placeholder="+91 1234567890"
             placeholderTextColor={"#B3B3B3"}
             className="height-[43px] border border-white p-3 font-[Inter] text-white"
-            onChangeText={setEmail}
+            onChangeText={setPhone}
           />
         </View>
 
@@ -53,4 +55,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignUpPhone;
