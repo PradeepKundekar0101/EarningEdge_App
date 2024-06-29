@@ -31,6 +31,7 @@ const AuthLayout = () => {
             headerShown: false,
             title: "Sign In",
             header: () => null,
+            animation: "slide_from_right",
           }}
         />
         <Stack.Screen
@@ -39,6 +40,7 @@ const AuthLayout = () => {
             headerShown: false,
             title: "Sign Up",
             header: () => null,
+            animation: "slide_from_right",
           }}
         />
       </Stack>
