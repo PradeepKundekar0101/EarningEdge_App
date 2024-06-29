@@ -11,7 +11,7 @@ const OTPEnterScreen = () => {
     if (email) {
       router.push("/signUp/signUpPhone");
     } else {
-      router.push("/signUp/userDetails");
+      router.push("/signUp/signUpUserDetails");
     }
   };
   useEffect(() => {

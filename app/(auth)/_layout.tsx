@@ -53,6 +53,15 @@ const AuthLayout = () => {
           }}
         />
         <Stack.Screen
+          name={"signUp/signUpUserDetails/index"}
+          options={{
+            headerShown: false,
+            title: "Sign Up",
+            header: () => null,
+            animation: "slide_from_right",
+          }}
+        />
+        <Stack.Screen
           name={"otpEnterScreen/index"}
           options={{
             headerShown: false,
