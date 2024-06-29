@@ -7,11 +7,8 @@ import { router } from "expo-router";
 
 const UnAuthBackgroundWrapper = ({ children, canGoBack = true }) => {
   return (
-    <View className="bg-black flex-1">
-      <ImageBackground
-        source={IMAGES.BACKGROUND_IMAGE}
-        className="flex-1 border-l "
-      >
+    <View className="bg-black flex-1 ">
+      <ImageBackground source={IMAGES.BACKGROUND_IMAGE} className="flex-1">
         <LinearGradient
           colors={["transparent", "rgba(0,0,0,0.7)"]}
           className="absolute w-[100%] h-[100%]"
@@ -27,7 +24,9 @@ const UnAuthBackgroundWrapper = ({ children, canGoBack = true }) => {
             />
           </View>
         )}
-        <View className="mx-[36px] -bottom-8">{children}</View>
+        <View className="absolute w-[100%] bottom-[82px]">
+          <View className="px-9">{children}</View>
+        </View>
       </ImageBackground>
     </View>
   );

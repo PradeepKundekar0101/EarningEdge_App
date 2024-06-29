@@ -20,17 +20,17 @@ const SignIn = () => {
             <TextInput
               placeholder="name@company.com"
               placeholderTextColor={"#B3B3B3"}
-              className="height-[43px] border border-white p-3"
+              className="height-[43px] border border-white p-3 text-white"
             />
           </View>
           <View>
-            <Text className="font-[12px] font-[Inter] text-white">
+            <Text className="font-[12px] font-[Inter] text-white ">
               Password
             </Text>
             <TextInput
               placeholder="********"
               placeholderTextColor={"#B3B3B3"}
-              className="height-[43px] border border-white p-3"
+              className="height-[43px] border border-white p-3 text-whi"
             />
           </View>
         </View>

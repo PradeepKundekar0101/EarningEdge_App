@@ -43,6 +43,15 @@ const AuthLayout = () => {
             animation: "slide_from_right",
           }}
         />
+        <Stack.Screen
+          name={"otpEnterScreen/index"}
+          options={{
+            headerShown: false,
+            title: "OTP Verify",
+            header: () => null,
+            animation: "slide_from_right",
+          }}
+        />
       </Stack>
     </SafeAreaView>
   );
